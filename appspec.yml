@@ -1,9 +1,9 @@
-version: 0.1
+version: 0.0
 Resources:
-  - TargetServices:
+  - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-1:389560765612:task-definition/bluegreen-taskdef:1"
+        TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
-          ContainerName: "nodejs-container"
-          ContainerPort: 3000
+          ContainerName: "nginx-website"
+          ContainerPort: 80
